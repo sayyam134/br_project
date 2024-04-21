@@ -10,7 +10,7 @@
     {% block content %}
     <h1>Students Data</h1>
     <div class = "container mt-5">
-        <form method = "GET"  class = "mb-4"></form>
+        <form method = "GET"  class = "mb-4">
            
         <div class="row">
             <div class="col-md-6">
@@ -22,8 +22,6 @@
             </div>
         </div>
         </form>
-
-        {% if queryset %}
         <table class="table table-striped">
             <thead>
               <tr>
@@ -72,9 +70,6 @@
                 
             </ul>
         </nav>
-        {% else %}
-        <p>No results found.</p>
-        {% endif %}
     </div>
     {% endblock %}
 </body>
