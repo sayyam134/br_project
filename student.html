@@ -7,6 +7,7 @@
     <title>Data</title>
 </head>
 <body>
+    {% block content %}
     <h1>Students Data</h1>
     <div class = "container mt-5">
         <form method = "GET"  class = "mb-4"></form>
@@ -22,6 +23,7 @@
         </div>
         </form>
 
+        {% if queryset %}
         <table class="table table-striped">
             <thead>
               <tr>
@@ -70,6 +72,10 @@
                 
             </ul>
         </nav>
+        {% else %}
+        <p>No results found.</p>
+        {% endif %}
     </div>
+    {% endblock %}
 </body>
 </html>

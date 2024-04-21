@@ -27,7 +27,9 @@ def get_students(request):
     queryset = Student.objects.all()
     if request.GET.get('search'):
         search = request.GET.get('search')
-        queryset = queryset.filter(student_name__icontains = search)
+        print("Search query:", search)
+        queryset = queryset.filter(student_name__icontains=search)
+        print("Filtered queryset:", queryset)
           
     paginator = Paginator(queryset, 25)  # Show 25 contacts per page.
     page_number = request.GET.get("page")
